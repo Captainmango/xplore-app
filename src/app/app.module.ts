@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { HomeComponent } from './components/home/home.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { PostItemComponent } from './components/post-item/post-item.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CommentsComponent } from './components/comments/comments.component';
     NavbarComponent,
     PostsComponent,
     HomeComponent,
-    CommentsComponent
+    CommentsComponent,
+    PostItemComponent
   ],
   imports: [
     BrowserModule,
