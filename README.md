@@ -2,25 +2,23 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.9.
 
-## Development server
+## Description
+
+This is a quick Angular project built to learn the ins and outs of the design of Angular as well as how the CLI works. This also uses RxJS to handle reactive data streams and ngrx to handle app level state to prevent excessive fetch requests. Data for the app comes from JSON placeholder.
+
+The app is a messageboard. User auth won't be implemented in MVP, but may do for the future if the project grows. Anyone on the page can leave a post and then can leave comments on the post. Posts and comments have full CRUD.
+
+## Running the app
+
+### Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
 
