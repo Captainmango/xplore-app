@@ -1,0 +1,18 @@
+{
+    
+    "Post": {
+        "userId": "int",
+        "id": "int",
+        "title": "string",
+        "body": "string",
+        "comments": "Comment[]"
+    },
+
+    "Comment": {
+        "id": "int",
+        "post": "Post",
+        "body": "string",
+        "name": "string"
+    }
+
+}
