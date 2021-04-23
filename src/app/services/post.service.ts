@@ -20,4 +20,8 @@ export class PostService {
   getPosts():Observable<Post[]>{
     return this.http.get<Post[]>(this.postsURL);
   }
+
+  getPost(postID:string): Observable<Post>{
+    return this.http.get<Post>(`${this.postsURL}/${postID}`);
+  }
 }

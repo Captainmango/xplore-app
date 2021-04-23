@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { Post } from 'src/app/models/Post';
+import { PostService } from 'src/app/services/post.service';
 
 @Component({
   selector: 'app-post-show',
@@ -7,9 +9,16 @@ import { Router } from '@angular/router';
 })
 export class PostShowComponent implements OnInit {
 
-  constructor(public router:Router) { }
+  constructor(private route: ActivatedRoute, private postService: PostService) { }
+
+  post!: Post
+
+  postID = this.route.snapshot.params.id
 
   ngOnInit(): void {
+    this.postService.getPost(this.postID).subscribe(post => {
+      this.post = post
+    })
   }
 
 }
