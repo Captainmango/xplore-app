@@ -5,3 +5,24 @@
     transform: scale(1.02);
     transition: all ease 0.3s;
 }
+
+.navbar {
+    position: fixed;
+    width: 100%
+}
+
+.navbar-menu.is-active {
+    animation: navAnim .2s ease-in-out;
+}
+
+@keyframes navAnim {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
