@@ -8,7 +8,20 @@ export class NavbarComponent implements OnInit {
 
   constructor() { }
 
+  status: boolean = false;
+
+
+
   ngOnInit(): void {
   }
+
+  setClasses(): object{
+    return { 'is-active': this.status }
+  }
+
+  toggleNavbar(): void{
+    this.status = !this.status
+  }
+
 
 }
