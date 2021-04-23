@@ -21,6 +21,8 @@ export class PostShowComponent implements OnInit {
     this.postService.getPost(this.postID).subscribe(post => {
       this.post = post
     })
+
+    console.log(this.post)
   }
 
 }
