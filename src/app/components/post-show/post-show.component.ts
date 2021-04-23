@@ -15,6 +15,8 @@ export class PostShowComponent implements OnInit {
 
   postID = this.route.snapshot.params.id
 
+  // TODO: work out how to make this async. The mark up updates as expected, but the console shows undefined errors.
+
   ngOnInit(): void {
     this.postService.getPost(this.postID).subscribe(post => {
       this.post = post
