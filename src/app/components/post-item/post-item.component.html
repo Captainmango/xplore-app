@@ -1,19 +1,21 @@
-<div class="card m-2">
-    <a class="has-text-black" routerLink="{{post.id}}">
-        <div class="card-content">
-            <div class="media">
-                <div class="media-left">
-                    <p class="title is-1">#{{post.id}}</p>
+<div class="column">
+    <div class="card m-2">
+        <a class="has-text-black" routerLink="{{post.id}}">
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-left">
+                        <p class="title is-1">#{{post.id}}</p>
+                    </div>
+                    <div class="media-content">
+                    <p class="title is-4">{{post.title}}</p>
+                    <p class="subtitle is-6">From user: {{post.userId}}</p>
+                    </div>
                 </div>
-                <div class="media-content">
-                <p class="title is-4">{{post.title}}</p>
-                <p class="subtitle is-6">From user: {{post.userId}}</p>
+            
+                <div class="content">
+                    {{post.body}}
                 </div>
             </div>
-        
-            <div class="content">
-                {{post.body}}
-            </div>
-        </div>
-    </a>
+        </a>
+    </div>
 </div>
