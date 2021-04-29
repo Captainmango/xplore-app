@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Post } from 'src/app/models/Post';
 import { PostService } from 'src/app/services/post.service';
 
@@ -9,7 +10,7 @@ import { PostService } from 'src/app/services/post.service';
 export class PostsComponent implements OnInit {
   posts!: Post[]
 
-  constructor(private postService: PostService) { }
+  constructor(private postService: PostService, public router: Router) { }
 
   ngOnInit(): void{
     this.postService.getPosts().subscribe(posts => {

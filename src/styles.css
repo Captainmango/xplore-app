@@ -8,6 +8,7 @@
 
 .navbar-menu.is-active {
     animation: navAnim .2s ease-in-out;
+    transition: all ease 0.3s;
 }
 
 @keyframes navAnim {

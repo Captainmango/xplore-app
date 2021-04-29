@@ -10,8 +10,6 @@ export class NavbarComponent implements OnInit {
 
   status: boolean = false;
 
-
-
   ngOnInit(): void {
   }
 

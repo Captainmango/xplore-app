@@ -1,3 +1,4 @@
+import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Post } from 'src/app/models/Post';
@@ -11,7 +12,7 @@ export class PostShowComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private postService: PostService) { }
 
-  post!: Post
+  @Input() post!: Post
 
   postID = this.route.snapshot.params.id
 

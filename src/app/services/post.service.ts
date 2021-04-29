@@ -13,7 +13,7 @@ export class PostService {
   // JSONPlaceholder url - looks better and isn't complete gibberish
   // https://jsonplaceholder.typicode.com/posts
   
-  postsURL: string = "https://mockend.com/Captainmango/xplore-app/posts"
+  postsURL: string = "https://jsonplaceholder.typicode.com/posts"
 
   constructor(private http: HttpClient) { }
 
