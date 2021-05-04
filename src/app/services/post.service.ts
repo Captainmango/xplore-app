@@ -3,6 +3,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Post } from '../models/Post';
 import { Observable } from 'rxjs';
 
+const httpOptions = {
+  headers: new HttpHeaders({
+    "Content-Type": "application/json"
+  })
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,6 +21,8 @@ export class PostService {
   
   postsURL: string = "https://jsonplaceholder.typicode.com/posts"
 
+
+
   constructor(private http: HttpClient) { }
 
   getPosts():Observable<Post[]>{
@@ -23,5 +31,10 @@ export class PostService {
 
   getPost(postID:string): Observable<Post>{
     return this.http.get<Post>(`${this.postsURL}/${postID}`);
+  }
+
+  editPost(post:Post): Observable<any>{
+    const url = `${this.postsURL}/${post.id}`
+    return this.http.put(url, post, httpOptions)
   }
 }

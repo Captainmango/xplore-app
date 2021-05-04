@@ -16,6 +16,17 @@ export class PostEditComponent implements OnInit {
   
 
   postID = this.route.snapshot.params.id
+  newPost!: Post
+
+  onChange = (target: EventTarget | null):string => {
+    return (target as HTMLInputElement).value
+  }
+
+  editPost = (post:Post) => {
+    this.postService.editPost(post).subscribe(post => {
+      console.log(post)
+    })
+  }
 
   ngOnInit(): void {
     this.post$ = this.postService.getPost(this.postID)

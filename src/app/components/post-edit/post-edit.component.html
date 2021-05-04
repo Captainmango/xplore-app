@@ -1,8 +1,9 @@
 <div *ngIf="post$ | async as post">
 
     <div class="container">
-        <input class="title" value="{{post.title}}">
-        <input class="content" value="{{post.body}}">
+        <input class="title" value="{{post.title}}" (input)="post.title = onChange($event.target)">
+        <input class="content" value="{{post.body}}" (input)="post.body = onChange($event.target)">
     </div>
+    <button (click)="editPost(post)">Save</button>
 
 </div>
