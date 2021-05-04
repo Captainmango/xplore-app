@@ -5,5 +5,6 @@
         <input class="content" value="{{post.body}}" (input)="post.body = onChange($event.target)">
     </div>
     <button (click)="editPost(post)">Save</button>
+    <button (click)="deletePost(post)">Delete</button>
 
 </div>
