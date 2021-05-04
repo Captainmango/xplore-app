@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { PostItemComponent } from './components/post-item/post-item.component';
 import { PostShowComponent } from './components/post-show/post-show.component';
+import { PostEditComponent } from './components/post-edit/post-edit.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PostShowComponent } from './components/post-show/post-show.component';
     HomeComponent,
     CommentsComponent,
     PostItemComponent,
-    PostShowComponent
+    PostShowComponent,
+    PostEditComponent
   ],
   imports: [
     BrowserModule,

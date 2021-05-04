@@ -1,0 +1,8 @@
+<div *ngIf="post$ | async as post">
+
+    <div class="container">
+        <input class="title" value="{{post.title}}">
+        <input class="content" value="{{post.body}}">
+    </div>
+
+</div>

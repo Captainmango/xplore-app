@@ -14,4 +14,10 @@
         </app-post-show>
 
     </div>
+
+    <div *ngIf='router.url.includes("/posts/:id/edit")'>
+        <app-post-edit>
+        </app-post-edit>
+
+    </div>
 </div>
