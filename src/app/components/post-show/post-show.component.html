@@ -1,3 +1,7 @@
-<div class="container">
-    <p class="title">{{post.title}}</p>
+<div *ngIf="post$ | async as post">
+
+    <div class="container">
+        <p class="title">{{post.title}}</p>
+    </div>
+
 </div>
