@@ -11,6 +11,7 @@ import { CommentsComponent } from './components/comments/comments.component';
 import { PostItemComponent } from './components/post-item/post-item.component';
 import { PostShowComponent } from './components/post-show/post-show.component';
 import { PostEditComponent } from './components/post-edit/post-edit.component';
+import { CommentItemComponent } from './components/comment-item/comment-item.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PostEditComponent } from './components/post-edit/post-edit.component';
     CommentsComponent,
     PostItemComponent,
     PostShowComponent,
-    PostEditComponent
+    PostEditComponent,
+    CommentItemComponent
   ],
   imports: [
     BrowserModule,

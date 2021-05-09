@@ -1,0 +1,22 @@
+
+<div class="column">
+    <div class="card m-2">
+        <a class="has-text-black" routerLink="{{comment.id}}">
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-left">
+                        <p class="title is-1">#{{comment.id}}</p>
+                    </div>
+                    <div class="media-content">
+                    <p class="title is-4">{{comment.email}}</p>
+                    <p class="subtitle is-6">From user: {{comment.name}}</p>
+                    </div>
+                </div>
+            
+                <div class="content">
+                    {{comment.body}}
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

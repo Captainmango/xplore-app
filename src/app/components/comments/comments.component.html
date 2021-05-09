@@ -1,1 +1,12 @@
-<p>comments works!</p>
+<div class="container">
+
+    <h1 class="title is-1 is-block">Comments</h1>
+
+    <div *ngIf='router.url.includes("/comments")' class="columns is-centered is-multiline pt-4">
+
+            <app-comment-item *ngFor="let comment of (comments$ | async )" [comment]="comment">
+            </app-comment-item>
+    
+    </div>
+    
+</div>
