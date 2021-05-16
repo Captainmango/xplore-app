@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Post } from '../models/Post';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -26,7 +27,7 @@ export class PostService {
   constructor(private http: HttpClient) { }
 
   getPosts():Observable<Post[]>{
-    return this.http.get<Post[]>(this.postsURL);
+    return this.http.get<Post[]>(this.postsURL)
   }
 
   getPost(postID:string): Observable<Post>{

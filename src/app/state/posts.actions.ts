@@ -3,7 +3,7 @@ import { Post } from "../models/Post"
 
 export const addPost = createAction(
     '[Post List] Add Post',
-    props<{ Id:number }>()
+    props<{ post:Post }>()
 )
 
 export const removePost = createAction(

@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { NgxPaginationModule } from 'ngx-pagination';
 import { StoreModule } from "@ngrx/store"
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -15,7 +16,6 @@ import { PostShowComponent } from './components/post-show/post-show.component';
 import { PostEditComponent } from './components/post-edit/post-edit.component';
 import { CommentItemComponent } from './components/comment-item/comment-item.component';
 import { postsReducer } from "./state/posts.reducer"
-import { collectionReducer } from "./state/collection.reducer"
 
 
 @NgModule({
