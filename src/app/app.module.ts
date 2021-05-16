@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
-import {NgxPaginationModule} from 'ngx-pagination';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { StoreModule } from "@ngrx/store"
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -13,6 +14,9 @@ import { PostItemComponent } from './components/post-item/post-item.component';
 import { PostShowComponent } from './components/post-show/post-show.component';
 import { PostEditComponent } from './components/post-edit/post-edit.component';
 import { CommentItemComponent } from './components/comment-item/comment-item.component';
+import { postsReducer } from "./state/posts.reducer"
+import { collectionReducer } from "./state/collection.reducer"
+
 
 @NgModule({
   declarations: [
@@ -31,7 +35,8 @@ import { CommentItemComponent } from './components/comment-item/comment-item.com
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    StoreModule.forRoot({posts: postsReducer})
   ],
   providers: [],
   bootstrap: [AppComponent]
