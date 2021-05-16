@@ -11,6 +11,10 @@ export const removePost = createAction(
     props<{ Id:number }>()
 )
 
+export const loadPosts = createAction(
+    '[Posts Page] Load Posts'
+)
+
 export const retrievedPostsList = createAction(
     '[Post List/API] Retrieved Posts Success',
     props<{ post:Post[] }>()
