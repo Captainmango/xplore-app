@@ -11,7 +11,9 @@ import { PostService } from 'src/app/services/post.service';
 export class PostsComponent implements OnInit {
   posts$!: Observable<Post[]>
 
-  constructor(private postService: PostService, public router: Router) { }
+  p: number = 1
+
+  constructor(private postService: PostService, public router: Router) {  }
 
   ngOnInit(): void{
     this.posts$ = this.postService.getPosts();

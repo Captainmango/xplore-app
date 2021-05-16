@@ -3,10 +3,14 @@
     <h1 class="title is-1 is-block">Posts</h1>
 
     <div *ngIf='router.url.includes("/posts")' class="columns is-centered is-multiline pt-4">
+        <div class="column is-two-thirds" *ngIf='posts$ | async as posts '>
 
-            <app-post-item *ngFor="let post of (posts$ | async )" [post]="post">
+            <app-post-item *ngFor="let post of posts | paginate: { itemsPerPage: 10, currentPage: p  }" [post]="post">
             </app-post-item>
-    
+
+        </div>
+
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
     </div>
     
     <div *ngIf='router.url.includes("/posts/:id")'>
