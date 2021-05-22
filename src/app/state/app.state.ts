@@ -1,6 +1,6 @@
-import { Post } from "../models/Post"
+import { PostsState } from "./posts.reducer";
 
 export interface AppState {
-    readonly posts: Post[]
+    readonly posts: PostsState
 
 }

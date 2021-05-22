@@ -13,9 +13,11 @@ import { loadPosts, retrievedPostsList } from 'src/app/state/posts.actions';
 })
 export class PostsComponent implements OnInit {
 
+  posts$:Observable<Post[]> = this.store.select(store => store.posts.list)
+
   p: number = 1
 
-  constructor(private postService: PostService, public router: Router, private store: Store<{posts: Post[]}>) {  }
+  constructor(private postService: PostService, public router: Router, private store: Store<AppState>) {  }
 
   ngOnInit(): void{
     this.store.dispatch(loadPosts())
