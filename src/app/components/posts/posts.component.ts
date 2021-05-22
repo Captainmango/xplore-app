@@ -12,14 +12,14 @@ import { loadPosts, retrievedPostsList } from 'src/app/state/posts.actions';
   templateUrl: './posts.component.html'
 })
 export class PostsComponent implements OnInit {
-  posts$!: Observable<Post[]> = this.store.select(retrievedPostsList)
+  posts$: Observable<Post[]> = this.store.select(state => state.posts)
 
   p: number = 1
 
   constructor(private postService: PostService, public router: Router, private store: Store<{posts: Post[]}>) {  }
 
   ngOnInit(): void{
-    this.store.dispatch(loadPosts)
+    this.store.dispatch(loadPosts())
   }
 
 }

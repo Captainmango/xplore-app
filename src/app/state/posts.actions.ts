@@ -17,6 +17,6 @@ export const loadPosts = createAction(
 
 export const retrievedPostsList = createAction(
     '[Post List/API] Retrieved Posts Success',
-    props<{ post:Post[] }>()
+    props<{ posts:Post[] }>()
 )
 

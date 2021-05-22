@@ -15,7 +15,11 @@ import { PostItemComponent } from './components/post-item/post-item.component';
 import { PostShowComponent } from './components/post-show/post-show.component';
 import { PostEditComponent } from './components/post-edit/post-edit.component';
 import { CommentItemComponent } from './components/comment-item/comment-item.component';
-import { postsReducer } from "./state/posts.reducer"
+import { postsReducer } from "./state/posts.reducer";
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment'
+import { EffectsModule } from '@ngrx/effects';
+import { PostEffects } from './effects/posts.effects';
 
 
 @NgModule({
@@ -36,7 +40,9 @@ import { postsReducer } from "./state/posts.reducer"
     AppRoutingModule,
     HttpClientModule,
     NgxPaginationModule,
-    StoreModule.forRoot({posts: postsReducer})
+    StoreModule.forRoot({posts: postsReducer}),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    EffectsModule.forRoot([PostEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]

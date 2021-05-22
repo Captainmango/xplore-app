@@ -1,12 +1,11 @@
-import { createReducer, on, Action } from "@ngrx/store"
+import { createReducer, on} from "@ngrx/store"
 import { retrievedPostsList, loadPosts } from "./posts.actions"
 import { Post } from "../models/Post"
-import { AppState } from "./app.state"
 
 const initialState: Array<Post> = []
 
 export const postsReducer = createReducer(
     initialState,
-    on(retrievedPostsList, (state, { post }) =>  ([...state, post])),
+    on(retrievedPostsList, (state, { posts }) => ([...state, ...posts])),
     on(loadPosts, (state) => ([...state]))
 )
