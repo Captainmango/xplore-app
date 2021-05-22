@@ -12,7 +12,6 @@ import { loadPosts, retrievedPostsList } from 'src/app/state/posts.actions';
   templateUrl: './posts.component.html'
 })
 export class PostsComponent implements OnInit {
-  posts$: Observable<Post[]> = this.store.select(state => state.posts)
 
   p: number = 1
 
