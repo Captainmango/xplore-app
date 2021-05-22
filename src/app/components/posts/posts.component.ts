@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
+import { never, Observable } from 'rxjs';
 import { Post } from 'src/app/models/Post';
 import { PostService } from 'src/app/services/post.service';
 import { AppState } from 'src/app/state/app.state';
@@ -21,6 +21,7 @@ export class PostsComponent implements OnInit {
 
   ngOnInit(): void{
     this.store.dispatch(loadPosts())
+
   }
 
 }
